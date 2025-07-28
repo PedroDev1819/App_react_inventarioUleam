@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "pedro",
+    "contrasena": "1234",
+    "rol": "admin"
+  },
+  {
+    "id": 2,
+    "nombre": "maria.gomez",
+    "contrasena": "abcd",
+    "rol": "usuario"
+  },
+  {
+    "id": 3,
+    "nombre": "juan.perez",
+    "contrasena": "juan2025",
+    "rol": "admin"
+  },
+  {
+    "id": 4,
+    "nombre": "laura.mendoza",
+    "contrasena": "laura321",
+    "rol": "usuario"
+  },
+  {
+    "id": 5,
+    "nombre": "carlos.lopez",
+    "contrasena": "carloz",
+    "rol": "usuario"
+  }
+]

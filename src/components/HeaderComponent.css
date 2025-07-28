@@ -1,0 +1,60 @@
+/* Estilos generales del header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  height: 90px;
+  width: 100%;
+  background-color: #424242;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+/* Logo */
+.logo-uleam {
+  width: 250px;
+}
+
+/* Estilo del nav */
+.navigation ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 30px;
+  color: white;
+  transition: transform 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
+
+/* Responsive opcional */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}

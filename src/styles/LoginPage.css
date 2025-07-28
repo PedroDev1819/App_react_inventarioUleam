@@ -1,0 +1,65 @@
+/* Barra superior */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 80px;
+  background-color: #424242;
+  z-index: 1000;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 450px;
+  height: 470px;
+  margin-top: 80px;
+  z-index: 10;
+}
+
+/* Imagen centrada */
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 200px;
+}
+
+/* Contenedor de input */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 85%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Enlace de contraseña olvidada */
+.forgotpassword {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.forgotpassword a {
+  color: #424242;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgotpassword a:hover {
+  color: #c00;
+  text-decoration: underline;
+}
