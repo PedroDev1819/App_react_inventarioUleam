@@ -1,4 +1,4 @@
-import EquipmentCard from "../components/equipmentCard";
+import EquipmentCard from "../components/EquipmentCard";
 import HeaderComponent from "../components/HeaderComponent";
 import SearchBar from "../components/SearchBar";
 import '../styles/InventarioPage.css';

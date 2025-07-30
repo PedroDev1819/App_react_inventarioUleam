@@ -6,6 +6,8 @@ import { FaSearch } from "react-icons/fa";
 
 function SearchBar() {
   const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+  const isAdmin = user && user.rol === "admin";
   const { setList, copyList } = useContext(ComputerEquipmentContext);
   const [searchText, setSearchText] = useState("");
 
@@ -28,7 +30,7 @@ function SearchBar() {
       <div className="searchBar">
         <input
           type="text"
-          placeholder="Nombre/ Tipo/ Marca-Modelo"
+          placeholder="Nombre/ Tipo/ Marca"
           value={searchText}
           onChange={handleSearch}
         />
@@ -36,7 +38,11 @@ function SearchBar() {
           <FaSearch className="searchIcon" />
         </button>
       </div>
-      <button className="btn" onClick={() => navigate('/registrar_equipo')}>Registrar Equipo</button>
+      {isAdmin && (
+        <button className="btn" onClick={() => navigate("/registrar_equipo")}>
+          Registrar Equipo
+        </button>
+      )}
     </div>
   );
 }
