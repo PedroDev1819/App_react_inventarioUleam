@@ -18,12 +18,11 @@ function AInformationForm({ form, handleChange }) {
         <option value="">Estado del Equipo</option>
         <option value="Operativo">Operativo</option>
         <option value="En mantenimiento">En mantenimiento</option>
-        <option value="Fuera de servicio">Fuera de servicio</option>
         <option value="Dado de baja">Dado de baja</option>
         <option value="Reservado">Reservado</option>
       </select>
 
-      <select name="fuenteAdquisicion" id="fuenteAdquisicion">
+      <select name="fuenteAdquisicion" id="fuenteAdquisicion" value={form.fuenteAdquisicion} onChange={handleChange}>
         <option value="">Fuente de Adquisicion del Equipo</option>
         <option value="Compra directa">Compra directa</option>
         <option value="Donacion">Donacion</option>

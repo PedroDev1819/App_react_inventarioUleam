@@ -68,6 +68,30 @@ function EditarEquipoPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const fechaUltimo = new Date(form.ultimo_mantenimiento);
+    const fechaProgramada = new Date(form.programar_mantenimiento);
+    const hoy = new Date();
+    const cincoAniosDespues = new Date();
+    cincoAniosDespues.setFullYear(hoy.getFullYear() + 10);
+    
+    if (fechaUltimo > hoy) {
+      return alert(
+        "La fecha del último mantenimiento no puede ser en el futuro."
+      );
+    }
+
+    if (fechaProgramada < fechaUltimo) {
+      return alert(
+        "La fecha programada no puede ser anterior a la del último mantenimiento."
+      );
+    }
+
+    if (fechaProgramada > cincoAniosDespues) {
+      return alert(
+        "La fecha programada está demasiado lejos en el futuro. Verifica si es correcto."
+      );
+    }
     const updatedList = computerEquipmentsList.map((e) =>
       e.numeroSerie === codigo ? form : e
     );
@@ -78,27 +102,32 @@ function EditarEquipoPage() {
 
   return (
     <>
-      <HeaderComponent />
-      <h2>Editar Informacion</h2>
-      <form onSubmit={handleSubmit} className="gridContainerForm">
-        <BasicInformacionForm form={form} handleChange={handleChange} />
-        <LocationForm form={form} handleChange={handleChange} />
-        <AInformationForm form={form} handleChange={handleChange} />
-        <DocumentsForm form={form} handleChange={handleChange} />
-        <EquipmentMaintenance form={form} handleChange={handleChange} />
-        <div>
-          <button type="submit" className="btn">
-            Guardar Equipo
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate(`/equipo/${codigo}`)}
-            className="btn"
-          >
-            Cancelar
-          </button>
-        </div>
-      </form>
+      <section className="formEdit">
+        <HeaderComponent />
+        <h2 className="titleEditForm">Editar Informacion</h2>
+        <form
+          onSubmit={handleSubmit}
+          className="gridContainerForm gridEditForm"
+        >
+          <BasicInformacionForm form={form} handleChange={handleChange} />
+          <LocationForm form={form} handleChange={handleChange} />
+          <AInformationForm form={form} handleChange={handleChange} />
+          <DocumentsForm form={form} handleChange={handleChange} />
+          <EquipmentMaintenance form={form} handleChange={handleChange} />
+          <div>
+            <button type="submit" className="btn">
+              Guardar Equipo
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate(`/equipo/${codigo}`)}
+              className="btn"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </section>
     </>
   );
 }

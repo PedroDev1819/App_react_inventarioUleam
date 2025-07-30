@@ -22,7 +22,7 @@ function EquipmentMaintenance({form, handleChange}) {
         onChange={handleChange}
       />
         <label htmlFor="obervacion">Observaciones:</label>
-      <textarea name="observaciones" id="observacion" value={form.observacione || ""} onChange={handleChange}></textarea>
+      <textarea name="observaciones" id="observacion" value={form.observaciones || ""} onChange={handleChange}></textarea>
     </div>
   )
 }

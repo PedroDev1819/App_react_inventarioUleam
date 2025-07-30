@@ -14,8 +14,25 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.gridEditForm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.titleEditForm {
+  margin-top: 120px;
+  margin-bottom: 20px;
+  column-span: 3;
+  text-align: center;
 }
 
 .cardForm {

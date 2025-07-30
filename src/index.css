@@ -5,14 +5,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+li {
+    list-style: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: #eeeb;
-}
-
-li {
-    list-style: none;
 }

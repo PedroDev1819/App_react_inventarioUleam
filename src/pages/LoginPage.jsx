@@ -5,6 +5,7 @@ import { useState } from "react";
 import users from "../data/users.json";
 import { useNavigate } from "react-router-dom";
 
+
 function LoginPage() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -37,6 +38,7 @@ function LoginPage() {
             type="text"
             placeholder="Nombre de usuario"
             required
+            minLength={4}
             onChange={(e) => setUser(e.target.value)}
           />
         </div>
@@ -46,15 +48,16 @@ function LoginPage() {
             type="password"
             placeholder="Contraseña"
             required
+            minLength={4}
             onChange={(p) => setPassword(p.target.value)}
           />
         </div>
 
         <div className="input-container">
-          <button className="btn"></button>
+          <button className="btn">Ingresar</button>
         </div>
 
-        <div className="forgotpassword"></div>
+        <div className="forgotpassword"><a href="#">¿Perdiste tu contraseña?</a></div>
       </form>
     </>
   );

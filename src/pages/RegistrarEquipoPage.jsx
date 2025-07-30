@@ -55,6 +55,33 @@ const RegistrarEquipo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!form.tipoEquipo)
+      return alert("Por favor, seleccione el tipo de equipo");
+    if (!form.nombre.trim())
+      return alert("Por favor, ingrese el nombre del equipo");
+    if (!form.marca.trim()) return alert("Por favor, ingrese la marca");
+    if (!form.modelo.trim()) return alert("Por favor, ingrese el modelo");
+    if (!form.numeroSerie.trim())
+      return alert("Por favor, ingrese el número de serie");
+
+    if (!form.facultad)
+      return alert("Por favor, seleccione la facultad o departamento");
+    if (!form.sala) return alert("Por favor, seleccione la sala");
+    if (!form.responsable.trim())
+      return alert("Por favor, ingrese el responsable asignado");
+
+    if (!form.fechaAdquisicion)
+      return alert("Por favor, seleccione la fecha de adquisición");
+    if (!form.estado)
+      return alert("Por favor, seleccione el estado del equipo");
+    if (!form.fuenteAdquisicion)
+      return alert("Por favor, seleccione la fuente de adquisición");
+    if (!form.valor || form.valor <= 0)
+      return alert("Por favor, ingrese un valor válido");
+
+    if (!form.imagen) return alert("Por favor, suba la imagen");
+
     const updatedList = [...computerEquipmentsList, form];
     setList(updatedList);
     setCopyList(updatedList);
@@ -70,7 +97,7 @@ const RegistrarEquipo = () => {
           <BasicInformacionForm form={form} handleChange={handleChange} />
           <LocationForm form={form} handleChange={handleChange} />
           <AInformationForm form={form} handleChange={handleChange} />
-          <DocumentsForm  handleChange={handleChange} />
+          <DocumentsForm handleChange={handleChange} />
 
           <button className="btn" type="submit">
             Guardar Equipo

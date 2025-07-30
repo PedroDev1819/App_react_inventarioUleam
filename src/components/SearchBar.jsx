@@ -36,9 +36,7 @@ function SearchBar() {
           <FaSearch className="searchIcon" />
         </button>
       </div>
-      <button className="btn">Filtrar</button>
       <button className="btn" onClick={() => navigate('/registrar_equipo')}>Registrar Equipo</button>
-      <button className="btn">Generar Reporte</button>
     </div>
   );
 }
