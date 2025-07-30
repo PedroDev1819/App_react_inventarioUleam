@@ -1,5 +1,5 @@
 import { Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
-import '../styles/DashboardPage.CSS';
+import '../styles/DashboardPage.css';
 
 
 function PieChartComponent({data, colors}) {
