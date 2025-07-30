@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
-import '../styles/DashboardPage.CSS';
+import '../styles/DashboardPage.css';
 
 function BarChartComponent({data}) {
   return (
